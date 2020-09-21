@@ -18,13 +18,12 @@ function App() {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
-    fetch('http://localhost:4000/upload', {
+    file && fetch('http://localhost:4000/upload', {
       method: 'POST',
       body: formData
     })
-    .then(response => response)
     .then(data => {
-      console.log(data)
+      console.log(data.statusText,data)
     })
     .catch(error => {
       console.error(error)
