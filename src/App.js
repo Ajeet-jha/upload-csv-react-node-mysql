@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DynamicInput from "./components/DynamicInput";
 
 function App() {
   const [file, setFile] = useState("");
@@ -38,6 +39,7 @@ function App() {
           Upload File
         </button>
       </form>
+      <DynamicInput />
     </div>
   );
 }
